@@ -286,7 +286,7 @@ async def onmessage(bot:TelegramClient,ev: NewMessage.Event,loop,ret=False):
         listdir = await compress(bot,ev,text,message,username)
         try:
             await bot.edit_message(ev.chat,message,text=f'📯Generando Session...')
-            session:RepoUploader = await repouploader.create_session(config.PROXY)
+            session:RepoUploader = await repouploader.create_session()
             resultlist = []
             txtsendname = str(listdir[0]).split('/')[-1].split('.')[0].split('_')[0] + '.txt'
             for fi in listdir:
