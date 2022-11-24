@@ -22,7 +22,7 @@ from pydownloader.downloader import Downloader
 import shorturl
 import xdlink
 
-accesslist = ['iamcracks']
+accesslist = ['nuevoss01']
 
 async def get_root(username):
     if os.path.isdir(config.ROOT_PATH+username)==False:
